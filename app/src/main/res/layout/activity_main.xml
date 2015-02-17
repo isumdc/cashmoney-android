@@ -27,6 +27,15 @@
             android:onClick="scoreboardButtonOnClick">
         </Button>
 
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/dragtest_button_text"
+            android:layout_gravity="center_horizontal"
+            android:onClick="dragTestButtonClick">
+        </Button>
+
+
     </LinearLayout>
 
 

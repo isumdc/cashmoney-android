@@ -8,5 +8,7 @@
     <string name="scoreboard_button_text">Scoreboard</string>
     <string name="title_activity_game">GameActivity</string>
     <string name="title_activity_scoreboard">ScoreboardActivity</string>
+    <string name="title_activity_drag_test">DragTestActivity</string>
+    <string name="dragtest_button_text">Drag Test</string>
 
 </resources>

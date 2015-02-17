@@ -52,4 +52,10 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, ScoreboardActivity.class);
         startActivity(intent);
     }
+
+    public void dragTestButtonClick(View view)
+    {
+        Intent intent = new Intent(this, DragTestActivity.class);
+        startActivity(intent);
+    }
 }

@@ -19,6 +19,8 @@ public class GameActivity extends ActionBarActivity {
         setContentView(R.layout.activity_game);
 
         gameData = new GameData();
+
+
     }
 
 

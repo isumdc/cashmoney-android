@@ -24,6 +24,10 @@
             android:name=".Activities.ScoreboardActivity"
             android:label="@string/title_activity_scoreboard" >
         </activity>
+        <activity
+            android:name=".Activities.DragTestActivity"
+            android:label="@string/title_activity_drag_test" >
+        </activity>
     </application>
 
 </manifest>

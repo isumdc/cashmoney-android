@@ -14,4 +14,14 @@ public class GameData {
         score = 0;
         difficulty = 0;
     }
+
+    public int getScore()
+    {
+        return score;
+    }
+
+    public int getDifficulty()
+    {
+        return difficulty;
+    }
 }
