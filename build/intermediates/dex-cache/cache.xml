@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Ethan\AndroidStudioProjects\CashMoney\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Ethan\AndroidStudioProjects\CashMoney\app\build\intermediates\pre-dexed\debug\classes-bcd9fecec17aee482a0cb7505af7990933881d9b.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ethan\AndroidStudioProjects\CashMoney\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Ethan\AndroidStudioProjects\CashMoney\app\build\intermediates\pre-dexed\debug\classes-a97146e30fdb2c4306fc722f71861c4529caa38c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ethan\AndroidStudioProjects\CashMoney\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Ethan\AndroidStudioProjects\CashMoney\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-bcbb80985ccc62e3d55d1a3097af4a9f6d3bbfbb.jar" />
-    </item>
-    <item
-        jar="C:\Users\Ethan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="C:\Users\Jacob\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Ethan\AndroidStudioProjects\CashMoney\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-171c3cc0fc0216779ff5bdf85bb1ca08425f8f3e.jar" />
+        <dex dex="C:\Users\Jacob\Documents\GitHub\cashmoney-android\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-faeca325da62dd75ff0364ff5f5a263961432b50.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\Documents\GitHub\cashmoney-android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\Jacob\Documents\GitHub\cashmoney-android\app\build\intermediates\pre-dexed\debug\classes-81e50c2b1fbc6a5931d94928831a33c376d34977.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\Documents\GitHub\cashmoney-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Jacob\Documents\GitHub\cashmoney-android\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-5723011c4b9a4642919ce304a59b1a6e3446e98c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jacob\Documents\GitHub\cashmoney-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Jacob\Documents\GitHub\cashmoney-android\app\build\intermediates\pre-dexed\debug\classes-c3d6f3e5df2c6d5ef8c2aa70059d4f3f68d5a6ba.jar" />
     </item>
 
 </items>
