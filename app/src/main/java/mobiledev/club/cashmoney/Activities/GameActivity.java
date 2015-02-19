@@ -2,11 +2,13 @@ package mobiledev.club.cashmoney.Activities;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.ClipData;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.ActionBarActivity;
+import android.transition.Explode;
 import android.view.DragEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,18 +16,22 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.Window;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import java.util.HashMap;
 import java.util.Random;
 
 import mobiledev.club.cashmoney.Models.GameData;
 import mobiledev.club.cashmoney.R;
 
 
-public class GameActivity extends ActionBarActivity {
+public class GameActivity extends Activity {
+
+    HashMap<String, AnimationRunnable> map;
 
     private GameData gameData;
     private Handler uiThreadHandler;
@@ -41,9 +47,12 @@ public class GameActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_game);
         layout = (RelativeLayout) findViewById(R.id.gameLayout);
         layout.setOnDragListener(new GameLayoutDragListener());
+
+        map = new HashMap<String, AnimationRunnable>();
 
         //Relative Layout width is 0 when onCreate is called:
         layout.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener()
@@ -87,7 +96,12 @@ public class GameActivity extends ActionBarActivity {
         params.leftMargin = width;
 
         layout.addView(image, params);
-        loopThread.mHandler.post(new AnimationRunnable(image));
+
+        AnimationRunnable newImage = new AnimationRunnable(image);
+        String imageTag = ""+ translationDuration;
+        image.setTag(imageTag);
+        map.put(imageTag, newImage);
+        loopThread.mHandler.post(newImage);
     }
 
 
@@ -130,6 +144,7 @@ public class GameActivity extends ActionBarActivity {
                     // Dropped, reassign View to ViewGroup
                     ViewGroup owner = (ViewGroup) image.getParent();
                     owner.removeView(image);
+                    map.get(image.getTag()).anim.cancel();
                     Toast.makeText(GameActivity.this, "Caught", Toast.LENGTH_SHORT).show();
                     break;
                 case DragEvent.ACTION_DRAG_ENDED:
@@ -184,13 +199,16 @@ public class GameActivity extends ActionBarActivity {
 
     class AnimationRunnable implements Runnable {
         private ImageView img;
+        ObjectAnimator anim;
+        private boolean caught;
+
         public AnimationRunnable(ImageView image){
             img = image;
         }
         @Override
         public void run() {
-            ObjectAnimator anim;
-            anim = ObjectAnimator.ofFloat(img, "translationY", 0, layoutHeight);
+
+            anim = ObjectAnimator.ofFloat(img, "translationY", 0, layoutHeight - img.getHeight());
             translationDuration -= 5;
             anim.setDuration(translationDuration);
             anim.start();
@@ -202,12 +220,13 @@ public class GameActivity extends ActionBarActivity {
 
                 @Override
                 public void onAnimationEnd(Animator animation) {
-                    Toast.makeText(GameActivity.this, "You lost!", Toast.LENGTH_SHORT).show();
+                    if(!caught)
+                        Toast.makeText(GameActivity.this, "You lost!", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onAnimationCancel(Animator animation) {
-
+                    caught = true;
                 }
 
                 @Override
